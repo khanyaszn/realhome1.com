@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealHome</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>REAL HOME</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="agents.html">Agents</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+           <button id="clear-favorites" onclick="clearFavorites()">Clear Favorites</button>  
+  <div class="search-bar"> 
+    <input type="text" id="search-input" placeholder="Search properties...">
+    <button onclick="searchProperties()">Search</button>
+  </div>
+
+  </header>
+ <!-- the various households-->
+  <main>
+    <section class="property-listings">
+      <div class="property-card">
+        <img src="one.jpeg" alt="Property Image">
+        <h2>3 Bedroom, 3 Bath , 2 Car Garage, Modern Home</h2>
+        <p>Location: The Valley Estate</p>
+        <p>Price: R1,000,200</p>
+        <button class="favorite-btn" onclick="addToFavorites('5 Bedroom, 3 Bath Modern Home')">Add to Favorites</button>
+      </div>
+
+      <div class="property-card">
+        <img src="two.jpeg" alt="Property Image">
+        <h2>4 Bedroom, 2 Bath Townhouse</h2>
+        <p>Location: The Valley</p>
+        <p>Price: R1,750,000</p>
+        <button class="favorite-btn" onclick="addToFavorites('4 Bedroom, 1 Bath Townhouse')">Add to Favorites</button>
+      </div>
+
+      <div class="property-card">
+        <img src="three.jpeg" alt="Property Image">
+        <h2>3 Bedroom, 2 Bath Suburban Home</h2>
+        <p>Location: The Villas</p>
+        <p>Price: R1,800,000</p>
+        <button class="favorite-btn" onclick="addToFavorites('3 Bedroom, 2 Bath Suburban Home')">Add to Favorites</button>
+      </div>
+
+      <div class="property-card">
+        <img src="four.jpeg" alt="Property Image">
+        <h2>4 Bedroom, 2 Bath ,1 Car Garage, Estate House</h2>
+        <p>Location: Pier Peak</p>
+        <p>Price: R2,800,000</p>
+        <button class="favorite-btn" onclick="addToFavorites('3 Bedroom, 4 Bath Townhouse')">Add to Favorites</button>
+      </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section class="favorites">
+      <h2>Your Favorite Properties</h2>
+      <ul id="favorites-list"></ul>
+    </section>
+
+    <section class="property-listings" id="property-listings">
+    <!-- Property cards remain unchanged -->
+  </section>
+
+   <section>
+      <h2>Property Locations</h2>
+      <div id="map" style="width: 100%; height: 400px;"></div>
+    </section>
+  </main>
+  <!-- Link JavaScript -->
+ <script src="script.js"></script> 
+</body>
+</html>
